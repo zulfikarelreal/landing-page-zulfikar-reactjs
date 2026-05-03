@@ -1,0 +1,265 @@
+.about {
+  padding: 120px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-bg-shape {
+  position: absolute;
+  top: 10%;
+  right: -200px;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 60, 172, 0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* ── Header ── */
+.about-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: start;
+  margin-bottom: 0;
+}
+
+.about-header-left {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.about-header-right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 12px;
+}
+
+.about-lead {
+  font-size: 18px;
+  color: var(--fg);
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+.about-body {
+  font-size: 14px;
+  color: var(--fg-dim);
+  line-height: 1.8;
+}
+
+.about-since {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-top: 8px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+
+.since-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--fg-dim);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.since-year {
+  font-family: var(--font-display);
+  font-size: 48px;
+  color: var(--accent);
+  line-height: 1;
+  letter-spacing: 0.02em;
+}
+
+/* ── Divider ── */
+.about-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 72px 0;
+}
+
+/* ── Values ── */
+.about-sub-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--fg-dim);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.value-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: border-color 0.3s, transform 0.3s;
+}
+
+.value-card:hover {
+  border-color: rgba(200, 255, 0, 0.3);
+  transform: translateY(-4px);
+}
+
+.value-icon {
+  font-size: 28px;
+  line-height: 1;
+}
+
+.value-title {
+  font-family: var(--font-display);
+  font-size: 24px;
+  letter-spacing: 0.02em;
+  color: var(--fg);
+}
+
+.value-desc {
+  font-size: 13px;
+  color: var(--fg-dim);
+  line-height: 1.7;
+}
+
+/* ── Team ── */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.team-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: border-color 0.3s, transform 0.3s;
+}
+
+.team-card:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-3px);
+}
+
+.team-avatar {
+  position: relative;
+  width: 52px;
+  height: 52px;
+  background: rgba(200, 255, 0, 0.08);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+}
+
+.avatar-ring {
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 1px dashed rgba(200, 255, 0, 0.3);
+  animation: spin-slow 10s linear infinite;
+}
+
+.hiring-avatar {
+  background: rgba(255, 60, 172, 0.08);
+  font-size: 22px;
+  color: var(--accent2);
+  font-family: var(--font-mono);
+  font-weight: 700;
+}
+
+.team-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.team-name {
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--fg);
+}
+
+.team-role {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--fg-dim);
+  letter-spacing: 0.05em;
+}
+
+.team-status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--fg-dim);
+  letter-spacing: 0.05em;
+}
+
+.team-hiring {
+  border-style: dashed;
+  border-color: rgba(255, 60, 172, 0.25);
+}
+
+.team-hiring:hover {
+  border-color: rgba(255, 60, 172, 0.5);
+}
+
+.hiring-btn {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--accent2);
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  border: 1px solid rgba(255, 60, 172, 0.3);
+  padding: 5px 12px;
+  border-radius: 100px;
+  transition: background 0.2s, color 0.2s;
+  text-align: center;
+}
+
+.hiring-btn:hover {
+  background: var(--accent2);
+  color: var(--bg);
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .about-header {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 520px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+}
