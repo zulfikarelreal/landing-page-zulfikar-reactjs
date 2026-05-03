@@ -1,0 +1,115 @@
+.services {
+  padding: 120px 0;
+  background: linear-gradient(to bottom, var(--bg), var(--bg2), var(--bg));
+}
+
+.services-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-top: 1px solid var(--border);
+}
+
+.service-row {
+  border-bottom: 1px solid var(--border);
+  cursor: none;
+  overflow: hidden;
+  transition: background 0.3s;
+}
+
+.service-row:hover,
+.service-row.open {
+  background: var(--card-bg);
+}
+
+.service-row-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 28px 0;
+}
+
+.service-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.service-num {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--fg-dim);
+  min-width: 28px;
+}
+
+.service-icon {
+  font-size: 20px;
+  color: var(--accent);
+  width: 40px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.service-row:hover .service-icon,
+.service-row.open .service-icon {
+  transform: rotate(90deg);
+}
+
+.service-name {
+  font-family: var(--font-display);
+  font-size: clamp(24px, 4vw, 40px);
+  letter-spacing: 0.02em;
+  color: var(--fg);
+  transition: color 0.2s;
+}
+
+.service-row:hover .service-name { color: var(--accent); }
+
+.service-toggle {
+  font-family: var(--font-mono);
+  font-size: 24px;
+  color: var(--fg-dim);
+  transition: color 0.2s, transform 0.3s;
+  width: 32px;
+  text-align: center;
+}
+
+.service-row.open .service-toggle {
+  color: var(--accent);
+}
+
+.service-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+  padding: 0 0 0 88px;
+}
+
+.service-row.open .service-body {
+  max-height: 200px;
+  padding: 0 0 28px 88px;
+}
+
+.service-body p {
+  color: var(--fg-dim);
+  font-size: 15px;
+  line-height: 1.7;
+  max-width: 500px;
+  margin-bottom: 16px;
+}
+
+.service-link {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+  letter-spacing: 0.03em;
+  transition: letter-spacing 0.3s;
+}
+
+.service-link:hover { letter-spacing: 0.08em; }
+
+@media (max-width: 768px) {
+  .service-name { font-size: 22px; }
+  .service-body { padding-left: 60px !important; }
+}

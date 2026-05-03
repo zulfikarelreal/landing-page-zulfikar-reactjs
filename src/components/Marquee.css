@@ -1,0 +1,32 @@
+.marquee-wrapper {
+  overflow: hidden;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 16px 0;
+  background: var(--bg2);
+  white-space: nowrap;
+}
+
+.marquee-track {
+  display: inline-flex;
+  gap: 28px;
+  animation: marquee 20s linear infinite;
+}
+
+.marquee-item {
+  font-family: var(--font-display);
+  font-size: 22px;
+  letter-spacing: 0.05em;
+  color: var(--fg-dim);
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+
+.marquee-item:hover {
+  color: var(--accent);
+}
+
+.marquee-dot {
+  color: var(--accent);
+  font-size: 14px;
+}
